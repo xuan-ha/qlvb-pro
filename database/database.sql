@@ -1,0 +1,20 @@
+CREATE DATABASE QLVB;
+GO
+USE QLVB;
+
+CREATE TABLE Users (
+    Id INT IDENTITY PRIMARY KEY,
+    Username NVARCHAR(50),
+    Password NVARCHAR(100),
+    Role NVARCHAR(50)
+);
+
+INSERT INTO Users VALUES ('admin','123456','Admin');
+
+CREATE TABLE Documents (
+    Id INT IDENTITY PRIMARY KEY,
+    Category NVARCHAR(50),
+    SoCongVan NVARCHAR(50),
+    NoiDung NVARCHAR(MAX),
+    DoMat NVARCHAR(50)
+);
